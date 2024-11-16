@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CET Admission Portal</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="scripts.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">CET Admission Portal</div>
+    <nav>
+      <ul id="nav-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Colleges</a></li>
+        <li><a href="applicationform.html">Application Form</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li id="login-link"><a href="#login-section">Login</a></li>
+      </ul>
+    </nav>
+    <p id="welcome-message">Welcome to the Engineering Admission Portal</p>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to the Engineering Admission Portal</h1>
+    <p>Apply to top engineering colleges in Maharashtra after qualifying CET!</p>
+    <button>Apply Now</button>
+  </section>
+
+  <section class="info" id="info-section">
+    <div class="card">
+      <h2>Important Dates</h2>
+      <p>Stay updated with the latest schedules and deadlines.</p>
+    </div>
+    <div class="card">
+      <h2>Colleges List</h2>
+      <p>Browse through the list of top engineering colleges.</p>
+    </div>
+    <div class="card">
+      <h2>Contact Support</h2>
+      <p>Need help? Get in touch with our support team.</p>
+    </div>
+  </section>
+
+  <!-- Login Section -->
+  <section id="auth-section">
+    <div class="login-section">
+      <h2>Login</h2>
+      <form action="/api/auth/login" method="POST" class="login-form" id="login-form">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <select name="role" required>
+          <option value="student">Student</option>
+          <option value="admin">Admin</option>
+        </select>
+        <button type="submit">Login</button>
+        <p class="auth-message">Don’t have an account? <a href="register.html">Sign up here</a>.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Address</h3>
+        <p><span class="icon">📍</span> 8th Floor, New Excelsior Building,<br>
+          A.K. Nayak Marg, Fort,<br>
+          Mumbai - 400 001</p>
+        <p><span class="icon">🌐</span> <a href="https://www.mahacet.org" target="_blank">www.mahacet.org</a></p>
+        <p><span class="icon">✔️</span> Helpline Number For CAP (Admission):<br>
+          Course-wise Helpline numbers are provided<br>
+          in the respective admission page.</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">CET</a></li>
+          <li><a href="#">Admission</a></li>
+          <li><a href="#">Search Institute</a></li>
+          <li><a href="#">CET Statistics</a></li>
+          <li><a href="#">CAP Statistics</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
